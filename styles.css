@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-image: url("car5_porsche.jpg"); /*A silver car, dark background with some gradients*/
+    background-repeat: no-repeat;
+    background-attachment: fixed; /*image does not move with screen size*/
+    background-size: cover; /*background image cover the whole area*/
+}
+
+/*Mobile display styling start*/
+
+/*This is a styling of a mobile navigation*/
+.mobile {
+    display: none;
+}
+
+.sidepanel  {
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    opacity: 90%;
+}
+
+.sidepanel a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    color: #fffefe;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidepanel a:hover {
+    color: #ccef74;
+    font-size: 110%;
+}
+
+.sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+.openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+}
+
+.openbtn:hover {
+    background-color:#444;
+}
+
+/*Mobile display styling end*/
+
+.nav {
+    background-color: #252525;
+    border-radius: 20px;
+    padding: 15px 15px;
+    width: 90%;
+    text-align: center;
+    margin: auto;
+    font-size: 90%;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav a:hover {
+    color: #ccef74;
+    font-size: 110%;
+}
+
+.menuitem {
+    padding: 0px 2%;
+}
+
+.hero { /*This is the main headline on a website (with big fonts)*/
+    margin-left: 33%;
+    margin-top: 5%;
+    width: 45%;
+    font-size: 250%;
+    color: white;
+}
+
+.bottom { /*Bottom part of the page having two parts left and right*/
+    width: 100%;
+    font-size: 80%;
+    position: fixed; 
+    bottom: 0px;
+    left: 0px;      /*Div remains at a fixed position, at the bottom 0px and at the left 0px*/
+    opacity: 80%;
+}
+
+.sub-heading { /*Left part of the bottom*/
+    float: left;
+    color: white;
+    background-color: black;
+    height: 100px;
+    width: 50%;
+    padding-left: 5%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-right: 1px solid rgb(146, 146, 146);
+    line-height: 150%;
+}
+
+.cta { /*Right part of the bottom*/
+    float: left;
+    color: white;
+    background-color: black;
+    height: 100px;
+    padding: 2%;
+    width: 50%;
+}
+
+@media only screen and (max-width:1000px) {
+    .hero {
+        font-size: 200%;
+        margin-left: 30%;
+        width: 50%;
+    }
+
+    .sub-heading {
+        padding-right: 5%;
+    }
+}
+
+@media only screen and (max-width:700px) {
+    .hero {
+        font-size: 180%;
+        width: 60%;
+    }
+
+    .bottom {
+        font-size: 70%;
+    }
+}
+
+@media only screen and (max-width:650px) {
+    .mobile {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+    }
+
+    .sub-heading, .cta {
+        width: 100%;
+        padding: 4%;
+    }
+
+    .cta {
+        margin-top: 7px;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .hero {
+        width: 70%;
+        margin: 5%;
+    }
+
+    .sub-heading, .cta { /*This styles both lesft and right part of the bottom but this time one on top of the other*/
+        width: 100%;
+        padding: 4%;
+    }
+
+    .cta {
+        margin-top: 7px;
+        text-align: left;
+    }
+}
